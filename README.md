@@ -1,98 +1,88 @@
-# Chatbot com Flask e Google Gemini
+# 🎨 Chatbot Especialista em Van Gogh
+<div align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" width="400"> <p><em>Um assistente digital que desvenda os mistérios da vida e obra do genial Vincent van Gogh</em></p> </div>
 
-Este projeto implementa um chatbot inteligente usando Flask e a API do Google Gemini. O chatbot pode ser facilmente adaptado para diferentes temas e conteúdos.
+# ✨ Sobre o Projeto
+Chatbot especializado que utiliza IA para responder sobre:
 
-## Pré-requisitos
+* Obras icônicas como "Noite Estrelada" e "Girassóis"
 
-- Python 3.9 ou superior
-- Conta Google Cloud com API Gemini ativada
-- Chave de API do Google Gemini
+* A vida conturbada do artista
 
-## Instalação
+* Técnicas revolucionárias do pós-impressionismo
 
-1. Abra o powershel ou cmd e clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd TEI_4301_2024
-   ```
-   Você também pode fazer o download se preferir.
+* Curiosidades sobre sua produção artística
 
-2. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
+# 🚀 Começando
+<b><h3>Pré-requisitos</h3></b>
+* Python 3.8+
 
-3. Configure o arquivo `.env`:
-   ```plaintext
-   GOOGLE_API_KEY="sua_chave_api_aqui"
-   ```
+* Conta no Google AI Studio
 
-## Adaptando para Seu Tema
+<b><h3>Instalação:</h3></b>
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/chatbot-van-gogh.git
 
-1. **Edite o Conteúdo Base**
-   - Abra `/app/utils/knowledge_base.py`
-   - Substitua o texto existente com seu conteúdo
-   - Mantenha a formatação markdown para melhor estrutura
-   ```python
-   CONHECIMENTO_BASE = """
-   # Seu Tema
+# Acesse a pasta
+cd chatbot-van-gogh
 
-   ## Seção 1
-   Conteúdo detalhado da seção 1...
+# Crie e ative o ambiente virtual (Windows)
+python -m venv venv
+venv\Scripts\activate
 
-   ## Seção 2
-   Conteúdo detalhado da seção 2...
-   """
-   ```
+# Instale as dependências
+pip install -r requirements.txt
+```
+<b><h3>Configuração:</h3></b>
 
-2. **Ajuste o Prompt do Chatbot**
-   - Em `app.py`, localize o prompt inicial
-   - Modifique as instruções para seu contexto
-   - Mantenha as regras de formatação e comportamento
+1.Crie um arquivo `.env` na raiz do projeto
 
-3. **Personalize a Interface**
-   - Cores e estilos em `static/style.css`
-   - Textos e elementos em `templates/index.html`
-   - Comportamentos em `static/script.js`
+2.Adicione sua chave da API:
 
-## Executando o Projeto
+```env
+GOOGLE_API_KEY=sua_chave_aqui
+```
 
-1. Inicie o servidor:
-   ```bash
-   python app.py
-   ```
+# 🛠️ Tecnologias
+<div align="center"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/Google_AI-4285F4?style=for-the-badge&logo=google&logoColor=white"> </div>
 
-2. Acesse no navegador:
-   ```
-   http://localhost:5000
-   ```
+# 🎨 Funcionalidades
+```markdown
+- 🔍 Pesquisa detalhada sobre obras específicas
+- 🎭 Explicações sobre o contexto histórico
+- 📊 Comparação entre diferentes períodos artísticos
+- 🤖 Respostas em linguagem natural
+```
+# 📌 Exemplo de Uso
+``` python
+# Pergunta ao chatbot:
+"Qual técnica Van Gogh usou em 'Noite Estrelada'?"
 
-## Dicas para Melhor Uso
+# Resposta esperada:
+"Van Gogh utilizou pinceladas ondulantes e espessas..."
+```
 
-1. **Conteúdo Estruturado**
-   - Use títulos e subtítulos claros
-   - Organize informações em tópicos
-   - Inclua exemplos relevantes
+# 🤝 Como Contribuir
+1.Faça um fork do projeto
 
-2. **Prompts Eficientes**
-   - Seja específico nas instruções
-   - Defina o tom das respostas
-   - Estabeleça limites claros
+2.Crie uma branch: 
+```bash 
+git checkout -b minha-melhoria
+```
 
-3. **Manutenção**
-   - Atualize o conteúdo regularmente
-   - Monitore as respostas
-   - Ajuste conforme necessário
+3.Commit suas alterações: 
+```bash
+git commit -m 'Adicionei X recurso'
+```
 
-## Solução de Problemas
+4.Push para a branch: 
+```bash
+git push origin minha-melhoria
+```
 
-- **API não responde**: Verifique a chave API no `.env`
-- **Formatação incorreta**: Revise a sintaxe markdown
-- **Respostas inadequadas**: Ajuste o prompt inicial
+5.Abra um Pull Request
 
-## Contribuição
+# 📝 Licença
+Este projeto está sob a licença [MIT](LICENSE) - clique para ver os detalhes.
 
-Contribuições são bem-vindas! Sinta-se à vontade para:
-- Reportar problemas
-- Sugerir melhorias
-- Enviar pull requests
+<div align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg"> <p><em>"Eu ponho o meu coração e a minha alma no meu trabalho, e perdi a razão no processo." - Van Gogh</em></p> </div>
