@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialista em Van Gogh</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f9f5e9;
+            color: #2c3e50;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .chatbot-button {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-palette"></i> Bem-vindo ao Especialista em Van Gogh</h1>
+            <p>Explore a vida e obra do gênio do pós-impressionismo</p>
+        </div>
+    </header>
+    
+    <main>
+        <section id="features" class="artist-features">
+            <h2><i class="fas fa-star"></i> O que você pode descobrir:</h2>
+            <ul>
+                <li><i class="fas fa-paint-brush"></i> Análise detalhada das obras mais famosas</li>
+                <li><i class="fas fa-book"></i> Histórias fascinantes da vida do artista</li>
+                <li><i class="fas fa-lightbulb"></i> Curiosidades sobre suas técnicas revolucionárias</li>
+            </ul>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2><i class="fas fa-info-circle"></i> Sobre este Projeto</h2>
+            <p>Este é um chatbot especializado na vida e obra de Vincent van Gogh, criado por entusiastas de arte e tecnologia. Nosso objetivo é tornar a arte acessível e interessante para todos.</p>
+
+            <!-- Carrossel de obras -->
+            <div class="artworks-carousel">
+                <h3><i class="fas fa-images"></i> Obras Destacadas</h3>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/320px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" 
+                            alt="A Noite Estrelada" 
+                            title="A Noite Estrelada (1889)">
+                        <div class="artwork-info">A Noite Estrelada (1889)</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Vincent_van_Gogh_-_Sunflowers_-_VGM_F458.jpg/320px-Vincent_van_Gogh_-_Sunflowers_-_VGM_F458.jpg" 
+                            alt="Os Girassóis" 
+                            title="Os Girassóis (1888)">
+                        <div class="artwork-info">Os Girassóis (1888)</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg/320px-Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg" 
+                            alt="O Quarto em Arles" 
+                            title="O Quarto em Arles (1888)">
+                        <div class="artwork-info">O Quarto em Arles (1888)</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg" 
+                            alt="Amendoeira em Flor" 
+                            title="Amendoeira em Flor (1890)">
+                        <div class="artwork-info">Amendoeira em Flor (1890)</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg/320px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg" 
+                            alt="Auto-retrato" 
+                            title="Auto-retrato (1889)">
+                        <div class="artwork-info">Auto-retrato (1889)</div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+                <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+            </div>
+
+            <!-- Curiosidades -->
+            <div class="fun-facts">
+                <h3><i class="fas fa-lightbulb"></i> Curiosidades sobre Van Gogh</h3>
+                <ul>
+                    <li><strong>Produção intensa:</strong> Pintou mais de 900 quadros em apenas 10 anos</li>
+                    <li><strong>Reconhecimento póstumo:</strong> Vendeu apenas 1 quadro durante sua vida</li>
+                    <li><strong>Relação fraternal:</strong> Escreveu mais de 800 cartas para seu irmão Theo</li>
+                    <li><strong>Influência japonesa:</strong> Era grande admirador das gravuras japonesas</li>
+                    <li><strong>Técnica única:</strong> Aplicava a tinta diretamente do tubo para a tela</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Especialista em Van Gogh. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="chatbot-button" class="chatbot-button">
+        <div class="icon-container">
+            <i class="fas fa-comments"></i>
+            <span class="button-text">Fale sobre Van Gogh</span>
+        </div>
+    </div>
+
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-palette"></i> Especialista Van Gogh</h3>
+            <button id="close-chatbot">Fechar</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Pergunte sobre Van Gogh...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i> Enviar</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
